@@ -5,9 +5,11 @@ project(cppfs)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(GenerateExportHeader)
 
+find_package(LibSSH2 REQUIRED)
+
 file(GLOB ${PROJECT_NAME}_SOURCES "source/cppfs/source/*.cpp")
-file(GLOB sshSources "source/cppfs/source/ssh/*.cpp")
-list(APPEND ${PROJECT_NAME}_SOURCES ${sshSources})
+#file(GLOB sshSources "source/cppfs/source/ssh/*.cpp")
+#list(APPEND ${PROJECT_NAME}_SOURCES ${sshSources})
 
 if (WIN32)
     file(GLOB winSources "source/cppfs/source/windows/*.cpp")
@@ -20,4 +22,14 @@ endif (WIN32)
 add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 target_include_directories(${PROJECT_NAME} PUBLIC "source/cppfs/include")
-target_include_directories(${PROJECT_NAME} PRIVATE "source/cppfs/3rdparty")
+target_include_directories(${PROJECT_NAME} PRIVATE "source/cppfs/3rdparty" ${LIBSSH2_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE
+    ${OPENSSL_LIBRARIES}
+    ${LIBSSH2_LIBRARY}
+
+    PUBLIC
+    ${DEFAULT_LIBRARIES}
+
+    INTERFACE
+)
