@@ -5,9 +5,6 @@
 #include <memory>
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -19,7 +16,7 @@ class AbstractFileIteratorBackend;
 *  @brief
 *    File iterator
 */
-class CPPFS_API FileIterator
+class FileIterator
 {
 public:
     /**

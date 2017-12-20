@@ -8,9 +8,6 @@
 #include <vector>
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -40,7 +37,7 @@ class Tree;
 *    functions are limited, so for example, file or directories
 *    will not be opened automatically.
 */
-class CPPFS_API FileHandle
+class FileHandle
 {
 public:
     using VisitFunc = std::function<bool(FileHandle &)>;

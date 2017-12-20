@@ -7,7 +7,6 @@
 #include <vector>
 #include <streambuf>
 
-#include <cppfs/cppfs_api.h>
 #include <cppfs/units.h>
 
 
@@ -22,7 +21,7 @@ class SshFileSystem;
 *  @brief
 *    Stream buffer for reading a SSH file
 */
-class CPPFS_API SshInputStreamBuffer : public std::streambuf
+class SshInputStreamBuffer : public std::streambuf
 {
 public:
     /**

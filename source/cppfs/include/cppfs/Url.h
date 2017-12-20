@@ -4,9 +4,6 @@
 
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -17,7 +14,7 @@ namespace cppfs
 *
 *    This class is a wrapper that enables limited parsing of URLs.
 */
-class CPPFS_API Url
+class Url
 {
 public:
     /**

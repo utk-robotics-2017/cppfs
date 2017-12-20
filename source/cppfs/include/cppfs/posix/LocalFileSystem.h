@@ -15,7 +15,7 @@ namespace cppfs
 *  @brief
 *    Representation of the local file system
 */
-class CPPFS_API LocalFileSystem : public AbstractFileSystem, public std::enable_shared_from_this<LocalFileSystem>
+class LocalFileSystem : public AbstractFileSystem, public std::enable_shared_from_this<LocalFileSystem>
 {
 public:
     /**

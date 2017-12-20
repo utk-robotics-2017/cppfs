@@ -20,7 +20,7 @@ class SshFileSystem;
 *  @brief
 *    File iterator for a remove file system accessed by SSH
 */
-class CPPFS_API SshFileIterator : public AbstractFileIteratorBackend
+class SshFileIterator : public AbstractFileIteratorBackend
 {
 public:
     /**

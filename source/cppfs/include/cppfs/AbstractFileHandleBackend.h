@@ -8,8 +8,6 @@
 #include <ios>
 #include <iosfwd>
 
-#include <cppfs/cppfs_api.h>
-
 
 namespace cppfs
 {
@@ -23,7 +21,7 @@ class AbstractFileIteratorBackend;
 *  @brief
 *    Interface for file handles
 */
-class CPPFS_API AbstractFileHandleBackend
+class AbstractFileHandleBackend
 {
 public:
     /**

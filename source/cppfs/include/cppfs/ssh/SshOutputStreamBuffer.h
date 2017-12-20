@@ -7,7 +7,6 @@
 #include <vector>
 #include <streambuf>
 
-#include <cppfs/cppfs_api.h>
 #include <cppfs/units.h>
 
 
@@ -22,7 +21,7 @@ class SshFileSystem;
 *  @brief
 *    Stream buffer for writing a SSH file
 */
-class CPPFS_API SshOutputStreamBuffer : public std::streambuf
+class SshOutputStreamBuffer : public std::streambuf
 {
 public:
     /**

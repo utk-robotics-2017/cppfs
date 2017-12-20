@@ -5,9 +5,6 @@
 #include <memory>
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -19,7 +16,7 @@ class AbstractFileSystem;
 *  @brief
 *    Interface for iterating on directories
 */
-class CPPFS_API AbstractFileIteratorBackend
+class AbstractFileIteratorBackend
 {
 public:
     /**

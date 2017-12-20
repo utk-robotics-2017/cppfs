@@ -6,9 +6,6 @@
 #include <vector>
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -20,7 +17,7 @@ class Diff;
 *  @brief
 *    Representation of a directory tree
 */
-class CPPFS_API Tree
+class Tree
 {
 public:
     /**

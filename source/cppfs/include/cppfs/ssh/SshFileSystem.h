@@ -16,7 +16,7 @@ namespace cppfs
 *  @brief
 *    Representation of a remote file system accessed by SSH
 */
-class CPPFS_API SshFileSystem : public AbstractFileSystem, public std::enable_shared_from_this<SshFileSystem>
+class SshFileSystem : public AbstractFileSystem, public std::enable_shared_from_this<SshFileSystem>
 {
     friend class SshFileHandle;
     friend class SshFileIterator;

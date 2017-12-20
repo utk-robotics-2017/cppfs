@@ -4,9 +4,6 @@
 
 #include <ostream>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -15,7 +12,7 @@ namespace cppfs
 *  @brief
 *    Output stream
 */
-class CPPFS_API OutputStream : public std::ostream
+class OutputStream : public std::ostream
 {
 public:
     /**

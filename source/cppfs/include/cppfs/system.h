@@ -4,9 +4,6 @@
 
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -30,7 +27,7 @@ namespace system
 *    It is assumed that the home directory doesn't change
 *    for the process lifetime.
 */
-CPPFS_API const std::string & homeDir();
+const std::string & homeDir();
 
 /**
 *  @brief
@@ -46,7 +43,7 @@ CPPFS_API const std::string & homeDir();
 *    It is assumed that the config directory doesn't change
 *    for the process lifetime.
 */
-CPPFS_API std::string configDir(const std::string & application);
+std::string configDir(const std::string & application);
 
 
 } // namespace system

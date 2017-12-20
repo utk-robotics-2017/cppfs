@@ -16,7 +16,7 @@ namespace cppfs
 *  @brief
 *    Representation of changes to a directory tree
 */
-class CPPFS_API Diff
+class Diff
 {
 public:
     /**

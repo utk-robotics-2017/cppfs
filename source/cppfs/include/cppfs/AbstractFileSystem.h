@@ -4,9 +4,6 @@
 
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -18,7 +15,7 @@ class FileHandle;
 *  @brief
 *    Interface for accessing file systems
 */
-class CPPFS_API AbstractFileSystem
+class AbstractFileSystem
 {
 public:
     /**

@@ -15,7 +15,7 @@ namespace cppfs
 *  @brief
 *    File visitor that calls a function
 */
-class CPPFS_API FunctionalFileVisitor : public FileVisitor
+class FunctionalFileVisitor : public FileVisitor
 {
 public:
     using VisitFunc = std::function<bool(FileHandle &)>;

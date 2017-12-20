@@ -4,9 +4,6 @@
 
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -29,7 +26,7 @@ namespace cppfs
 *    Therefore, paths are treated purely syntactically and do not imply that
 *    for example a file does really exist.
 */
-class CPPFS_API FilePath
+class FilePath
 {
 public:
     /**

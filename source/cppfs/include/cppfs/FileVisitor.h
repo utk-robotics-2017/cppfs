@@ -2,9 +2,6 @@
 #pragma once
 
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -16,7 +13,7 @@ class FileHandle;
 *  @brief
 *    File visitor
 */
-class CPPFS_API FileVisitor
+class FileVisitor
 {
     friend class FileHandle;
 

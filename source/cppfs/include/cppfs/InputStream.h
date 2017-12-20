@@ -4,9 +4,6 @@
 
 #include <istream>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -15,7 +12,7 @@ namespace cppfs
 *  @brief
 *    Input stream
 */
-class CPPFS_API InputStream : public std::istream
+class InputStream : public std::istream
 {
 public:
     /**

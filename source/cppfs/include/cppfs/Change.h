@@ -4,9 +4,6 @@
 
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -15,7 +12,7 @@ namespace cppfs
 *  @brief
 *    Representation of one change to a directory tree
 */
-class CPPFS_API Change
+class Change
 {
 public:
     /**

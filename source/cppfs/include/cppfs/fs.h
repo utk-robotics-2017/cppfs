@@ -4,9 +4,6 @@
 
 #include <string>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -35,7 +32,7 @@ namespace fs
 *  @return
 *    File handle
 */
-CPPFS_API FileHandle open(const std::string & path, const LoginCredentials * credentials = nullptr);
+FileHandle open(const std::string & path, const LoginCredentials * credentials = nullptr);
 
 /**
 *  @brief
@@ -47,7 +44,7 @@ CPPFS_API FileHandle open(const std::string & path, const LoginCredentials * cre
 *  @return
 *    SHA1 hash
 */
-CPPFS_API std::string sha1(const std::string & str);
+std::string sha1(const std::string & str);
 
 /**
 *  @brief
@@ -59,7 +56,7 @@ CPPFS_API std::string sha1(const std::string & str);
 *  @return
 *    Base64 encoded string
 */
-CPPFS_API std::string base64(const std::string & str);
+std::string base64(const std::string & str);
 
 /**
 *  @brief
@@ -71,7 +68,7 @@ CPPFS_API std::string base64(const std::string & str);
 *  @return
 *    Decoded string
 */
-CPPFS_API std::string fromBase64(const std::string & base64);
+std::string fromBase64(const std::string & base64);
 
 /**
 *  @brief
@@ -83,7 +80,7 @@ CPPFS_API std::string fromBase64(const std::string & base64);
 *  @return
 *    Hash string
 */
-CPPFS_API std::string hashToString(const unsigned char * hash);
+std::string hashToString(const unsigned char * hash);
 
 
 } // namespace fs

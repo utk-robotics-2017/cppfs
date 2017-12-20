@@ -18,7 +18,7 @@ class LocalFileSystem;
 *  @brief
 *    File iterator for the local file system
 */
-class CPPFS_API LocalFileIterator : public AbstractFileIteratorBackend
+class LocalFileIterator : public AbstractFileIteratorBackend
 {
 public:
     /**

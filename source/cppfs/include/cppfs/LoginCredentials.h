@@ -5,9 +5,6 @@
 #include <string>
 #include <map>
 
-#include <cppfs/cppfs_api.h>
-
-
 namespace cppfs
 {
 
@@ -22,7 +19,7 @@ namespace cppfs
 *    the respective file system implementations. See the documentation for a specific file
 *    system implementation to learn what options it supports.
 */
-class CPPFS_API LoginCredentials
+class LoginCredentials
 {
 public:
     /**

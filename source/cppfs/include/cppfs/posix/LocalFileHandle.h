@@ -18,7 +18,7 @@ class LocalFileSystem;
 *  @brief
 *    File handle for the local file system
 */
-class CPPFS_API LocalFileHandle : public AbstractFileHandleBackend
+class LocalFileHandle : public AbstractFileHandleBackend
 {
 public:
     /**

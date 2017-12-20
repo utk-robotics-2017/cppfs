@@ -18,7 +18,7 @@ class SshFileSystem;
 *  @brief
 *    File handle for a remote file system accessed by SSH
 */
-class CPPFS_API SshFileHandle : public AbstractFileHandleBackend
+class SshFileHandle : public AbstractFileHandleBackend
 {
 public:
     /**
