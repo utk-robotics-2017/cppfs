@@ -324,28 +324,7 @@ bool LocalFileHandle::createLink(AbstractFileHandleBackend & dest)
 
 bool LocalFileHandle::createSymbolicLink(AbstractFileHandleBackend & dest)
 {
-    // Check source file
-    if (!isFile()) return false;
-
-    // Get source and target filenames
-    std::string src = m_path;
-    std::string dst = dest.path();
-
-    if (dest.isDirectory())
-    {
-        std::string filename = FilePath(m_path).fileName();
-        dst = FilePath(dest.path()).resolve(filename).fullPath();
-    }
-
-    // Copy file
-    if (!CreateSymbolicLinkA(src.c_str(), dst.c_str(), 0))
-    {
-        // Error!
-        return false;
-    }
-
-    // Done
-    return true;
+    throw "Symbolic Link is not supported on Windows.";
 }
 
 bool LocalFileHandle::rename(const std::string & filename)
