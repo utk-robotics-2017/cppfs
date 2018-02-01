@@ -3,10 +3,10 @@
 # External dependencies
 # 
 
-find_package(LibSSH2 REQUIRED)
+#find_package(LibSSH2 REQUIRED)
 find_package(LibCrypto)
 find_package(ZLIB)
-find_package(OpenSSL)
+#find_package(OpenSSL)
 
 
 # 
@@ -63,11 +63,11 @@ set(headers
     ${include_path}/${localfs}/LocalFileHandle.h
     ${include_path}/${localfs}/LocalFileIterator.h
 
-    ${include_path}/ssh/SshFileSystem.h
-    ${include_path}/ssh/SshFileHandle.h
-    ${include_path}/ssh/SshFileIterator.h
-    ${include_path}/ssh/SshInputStreamBuffer.h
-    ${include_path}/ssh/SshOutputStreamBuffer.h
+#    ${include_path}/ssh/SshFileSystem.h
+#    ${include_path}/ssh/SshFileHandle.h
+#    ${include_path}/ssh/SshFileIterator.h
+#    ${include_path}/ssh/SshInputStreamBuffer.h
+#    ${include_path}/ssh/SshOutputStreamBuffer.h
 )
 
 set(sources
@@ -93,11 +93,11 @@ set(sources
     ${source_path}/${localfs}/LocalFileHandle.cpp
     ${source_path}/${localfs}/LocalFileIterator.cpp
 
-    ${source_path}/ssh/SshFileSystem.cpp
-    ${source_path}/ssh/SshFileHandle.cpp
-    ${source_path}/ssh/SshFileIterator.cpp
-    ${source_path}/ssh/SshInputStreamBuffer.cpp
-    ${source_path}/ssh/SshOutputStreamBuffer.cpp
+#    ${source_path}/ssh/SshFileSystem.cpp
+#    ${source_path}/ssh/SshFileHandle.cpp
+#    ${source_path}/ssh/SshFileIterator.cpp
+#    ${source_path}/ssh/SshInputStreamBuffer.cpp
+#    ${source_path}/ssh/SshOutputStreamBuffer.cpp
 )
 
 # Group source files
@@ -155,8 +155,8 @@ target_include_directories(${target}
     ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_BINARY_DIR}/include
-    ${OPENSSL_INCLUDE_DIR}
-    ${LIBSSH2_INCLUDE_DIR}
+#    ${OPENSSL_INCLUDE_DIR}
+#    ${LIBSSH2_INCLUDE_DIR}
 
     PUBLIC
     ${DEFAULT_INCLUDE_DIRECTORIES}
@@ -174,8 +174,8 @@ target_include_directories(${target}
 
 target_link_libraries(${target}
     PRIVATE
-    ${OPENSSL_LIBRARIES}
-    ${LIBSSH2_LIBRARY}
+#    ${OPENSSL_LIBRARIES}
+#    ${LIBSSH2_LIBRARY}
 
     PUBLIC
     ${DEFAULT_LIBRARIES}
