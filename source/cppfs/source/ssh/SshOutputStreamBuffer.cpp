@@ -60,7 +60,10 @@ SshOutputStreamBuffer::~SshOutputStreamBuffer()
         sync();
 
         // Sync file
-        libssh2_sftp_fsync((LIBSSH2_SFTP_HANDLE *)m_file);
+        // Requires libssh2 1.4.4,
+        // Raspbian Jessie only has 1.4.3-4.1
+        // Ubuntu Trusty (Travis) only has 1.4.3-2
+        //libssh2_sftp_fsync((LIBSSH2_SFTP_HANDLE *)m_file);
         libssh2_sftp_close((LIBSSH2_SFTP_HANDLE *)m_file);
     }
 }
