@@ -45,6 +45,7 @@ FileHandle open(const std::string & path, const LoginCredentials * credentials)
     // SSH
     if (url.protocol() == "ssh://")
     {
+#if 0
         // Get connection parameters
         std::string host       = url.host();
         std::string user       = url.username();
@@ -71,6 +72,7 @@ FileHandle open(const std::string & path, const LoginCredentials * credentials)
 
         // Open path
         return fs->open(localPath);
+#endif
     }
 
     // Local file system
