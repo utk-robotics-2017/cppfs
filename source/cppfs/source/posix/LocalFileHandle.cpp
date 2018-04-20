@@ -251,6 +251,12 @@ unsigned long LocalFileHandle::permissions() const
     {
         unsigned long mode = 0;
 
+        if ( ((struct stat *)m_fileInfo)->st_mode & S_ISUID )
+            mode |= (unsigned long)FilePermissions::SetUid;
+        if ( ((struct stat *)m_fileInfo)->st_mode & S_ISGID )
+            mode |= (unsigned long)FilePermissions::SetGid;
+        if ( ((struct stat *)m_fileInfo)->st_mode & S_ISVTX )
+            mode |= (unsigned long)FilePermissions::SetSticky;
         if ( ((struct stat *)m_fileInfo)->st_mode & S_IRUSR )
             mode |= (unsigned long)FilePermissions::UserRead;
         if ( ((struct stat *)m_fileInfo)->st_mode & S_IWUSR )
@@ -281,6 +287,12 @@ void LocalFileHandle::setPermissions(unsigned long permissions)
     // Convert permission flags
     unsigned long mode = 0;
 
+    if (permissions & (unsigned long)FilePermissions::SetUid)
+        mode |= S_ISUID;
+    if (permissions & (unsigned long)FilePermissions::SetGid)
+        mode |= S_ISGID;
+    if (permissions & (unsigned long)FilePermissions::SetSticky)
+        mode |= S_ISVTX;
     if (permissions & (unsigned long)FilePermissions::UserRead)
         mode |= S_IRUSR;
     if (permissions & (unsigned long)FilePermissions::UserWrite)
